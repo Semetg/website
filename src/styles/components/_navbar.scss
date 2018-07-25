@@ -1,0 +1,45 @@
+.navbar {
+  background-image: none;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 0;
+  font-weight: 400;
+  letter-spacing: .3rem;
+
+  & .navbar-brand, & .navbar-nav > li > a {
+    margin: .5rem 1rem;
+    color: $off-white;
+    border-radius: .5rem;
+  }
+
+  & .navbar-toggle {
+    background-color: $off-white;
+
+    &:focus, &:hover {
+      background-color: $off-white;
+    }
+
+    & .icon-bar {
+      background-color: $color-primary;
+    }
+  }
+
+  & .navbar-brand {
+    &:focus, &:hover {
+      background-color: $off-white;
+      color: $color-primary;
+    }
+  }
+
+  & .is-active {
+    background-color: $off-white;
+    color: $color-primary;
+  }
+
+  .navbar-nav > li {
+    & > a:focus, & > a:hover, & > .is-active {
+      background-color: $off-white;
+      color: $color-primary;
+    }
+  }
+}

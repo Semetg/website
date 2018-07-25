@@ -1,5 +1,9 @@
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -7,10 +11,8 @@ html {
 }
 
 body {
-  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
 button {
@@ -19,8 +21,4 @@ button {
 
 button:disabled {
   cursor: default;
-}
-
-.is-active {
-  font-weight: bold;
 }
