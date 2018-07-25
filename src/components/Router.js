@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import NotFound from './NotFound';
-import STLMain from './STLMain';
-import TutorialMain from './TutorialMain';
-import TipsAndTricks from './TipsAndTricksMain';
+import Home from './main_pages/Home';
+import NotFound from './main_pages/NotFound';
+import STLMain from './main_pages/STLMain';
+import TutorialMain from './main_pages/TutorialMain';
+import TipsAndTricks from './main_pages/TipsAndTricksMain';
 import CustomNavbar from './CustomNavbar';
 
 export default () => (

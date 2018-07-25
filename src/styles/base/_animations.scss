@@ -1,0 +1,12 @@
+@keyframes blink {
+
+  10% {
+    border: none;
+    box-shadow: none;
+  }
+
+  15% {
+    border: $border-tutorial-desktop;
+    box-shadow: $box-shadow-tutorial-desktop;
+  }
+}

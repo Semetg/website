@@ -1,0 +1,53 @@
+.jumbotron {
+  background-color: transparent;
+  height: 87vh;
+  background-blend-mode: screen;
+  background-image: url('/images/Code.png');
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+    
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo-jumbotron {
+
+  & button {
+    background-color: transparent;
+    box-shadow: $box-shadow-tutorial-desktop;
+    border: $border-tutorial-desktop;
+    padding: 1rem;
+    font-size: 8rem;
+    color: $off-white;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    animation: blink 4s linear 2s infinite;
+
+    @media only screen and (max-width: $breakpoint-first) {
+      left: 50%;
+    }
+
+    @media only screen and (max-width: $breakpoint-second) {
+      font-size: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width: $breakpoint-third) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & span {
+      @media only screen and (max-width: $breakpoint-third) {
+        display: none;
+      }
+    }
+  }
+  
+  position: relative;
+}
