@@ -3,13 +3,13 @@
   outline: none;
 
   &__button {
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     background-color: white;
     border-radius: 50%;
     position: fixed;
-    top: 6rem;
-    right: 6rem;
+    top: 2rem;
+    right: 2rem;
     border: none;
     z-index: 5;
     outline: none;
@@ -37,13 +37,13 @@
 
   &__background {
     z-index: 1;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
+    top: 2.25rem;
+    right: 2.25rem;
     transition: all .6s;
 
     &.open {
