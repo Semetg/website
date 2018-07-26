@@ -1,16 +1,19 @@
 .navbar {
   margin: 0;
   background-image: none;
-  background-color: $color-primary;
+  background-color: $black;
   border: none;
   border-radius: 0;
   font-weight: 400;
   letter-spacing: .3rem;
+  font-family: 'Lato', sans-serif;
 
   & .navbar-brand, & .navbar-nav > li > a {
+    border: 1px solid $color-primary;
     margin: .5rem 1rem;
-    color: $off-white;
+    color: $color-primary;
     border-radius: .5rem;
+    text-shadow: none;
   }
 
   & .navbar-toggle {
@@ -27,20 +30,20 @@
 
   & .navbar-brand {
     &:focus, &:hover {
-      background-color: $off-white;
-      color: $dark-blue;
+      background-color: $color-primary;
+      color: $off-white;
     }
   }
 
   & .is-active {
-    background-color: $off-white;
-    color: $dark-blue;
+    background-color: $color-primary;
+    color: $off-white;
   }
 
   .navbar-nav > li {
     & > a:focus, & > a:hover, & > .is-active {
-      background-color: $off-white;
-      color: $dark-blue;
+      background-color: $color-primary;
+    color: $off-white;
     }
   }
 }

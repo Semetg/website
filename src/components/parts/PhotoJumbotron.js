@@ -6,6 +6,4 @@ export default () => (
     <Jumbotron></Jumbotron>
     <button>Tutorial  <span>&rarr;</span></button>
   </div>
-  
-  
 );
