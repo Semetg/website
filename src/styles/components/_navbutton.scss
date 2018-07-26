@@ -1,0 +1,123 @@
+.navbutton {
+  text-align: center;
+  outline: none;
+
+  &__button {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border: none;
+    z-index: 5;
+    outline: none;
+
+    & span {
+      &::before, &::after {
+        transition: all .2s;
+      }
+    }
+    
+    &.open span {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__background {
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    transition: all .6s;
+
+    &.open {
+      transform: scale(80);
+    }
+  }
+
+  & span {
+    position: relative;
+    margin-top: 1.2rem;
+
+    &, &::before, &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $grey;
+      display: inline-block;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__nav {
+    z-index: 4;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  &__list {
+    z-index: 6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__item {
+    background-color: $off-white;
+    margin: 1rem;
+    display: none;
+    z-index: 6;
+    font-size: 2 * $font-size-large;
+    padding: 2rem 3rem;
+    transition: all .4s;
+    animation: come-from-top .3s linear;
+
+    & > a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-primary-dark;
+    }
+    
+    &.open {
+      display: block;
+    }
+  }
+}

@@ -1,49 +1,27 @@
 .navbar {
-  margin: 0;
-  background-image: none;
   background-color: $black;
-  border: none;
-  border-radius: 0;
-  font-weight: 400;
-  letter-spacing: .3rem;
-  font-family: 'Lato', sans-serif;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
 
-  & .navbar-brand, & .navbar-nav > li > a {
-    border: 1px solid $color-primary;
-    margin: .5rem 1rem;
+  &__item {
+    font-size: $font-size-large;
+    text-decoration: none;
     color: $color-primary;
-    border-radius: .5rem;
-    text-shadow: none;
+    padding: 1rem;
+    
+    margin-right: 8rem;
   }
 
-  & .navbar-toggle {
-    background-color: $off-white;
-
-    &:focus, &:hover {
-      background-color: $off-white;
-    }
-
-    & .icon-bar {
-      background-color: $color-primary;
-    }
-  }
-
-  & .navbar-brand {
-    &:focus, &:hover {
-      background-color: $color-primary;
-      color: $off-white;
-    }
+  &__home {
+    margin-left: 10rem;
   }
 
   & .is-active {
-    background-color: $color-primary;
-    color: $off-white;
-  }
-
-  .navbar-nav > li {
-    & > a:focus, & > a:hover, & > .is-active {
-      background-color: $color-primary;
-    color: $off-white;
-    }
+    background-color: $off-white;
+    border: none;
   }
 }
