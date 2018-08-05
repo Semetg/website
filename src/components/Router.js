@@ -2,12 +2,11 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './main_pages/Home';
 import NotFound from './main_pages/NotFound';
-import STLMain from './main_pages/STLMain';
+import STLMain from './main_pages/STLMainLoadable';
 import TutorialMain from './main_pages/TutorialMain';
 import TipsAndTricks from './main_pages/TipsAndTricksMain';
-import Navbar from './navigation/Navbar';
-import Navbutton from './navigation/Navbutton';
 import Navigation from './navigation/Navigation';
+import Footer from './parts/Footer';
 
 export default () => (
   <BrowserRouter>
@@ -20,6 +19,7 @@ export default () => (
         <Route excat path="/TipsAndTricksMain" component={TipsAndTricks}/>
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 );

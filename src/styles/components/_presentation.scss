@@ -1,0 +1,128 @@
+.presentation {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rem 0;
+    background-size: cover;
+    
+    align-items: center;
+
+    background-image:
+    linear-gradient(to bottom left, rgba($color-primary-light, .9), rgba($color-primary-dark, .9)),
+    url('/images/Code2.png');
+    
+    @media only screen and (max-width: $breakpoint-third) {
+      flex-direction: column;
+      padding: 5rem 0;
+    }
+  }
+
+  &-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-image: linear-gradient(to top, $off-white, white);
+    padding: 4rem 8rem;
+    transition: all .5s;
+    border: 1rem solid $grey;
+
+    @media only screen and (max-width: $breakpoint-first) {
+      padding: 1.1rem 2.2rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-second) {
+      border: none;
+      margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-third) {
+      border: 1rem solid $grey;
+    }
+
+    &:hover {
+      transform: translateY(-2rem) scale(1.03);
+    }
+
+    &__icon {
+      fill: $color-primary;
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 2rem;
+      align-self: center;
+      padding: 1rem;
+      border-radius: 450%;
+      border: 3px solid $color-primary-light;
+
+      @media only screen and (max-width: $breakpoint-second) {
+        margin-bottom: .5rem;
+      }
+    }
+
+    &:first-child {
+      margin-left: 10rem;
+
+      @media only screen and (max-width: $breakpoint-second) {
+        margin-left: 2rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-third) {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+
+    &:last-child {
+      margin-right: 10rem;
+
+      @media only screen and (max-width: $breakpoint-second) {
+        margin-right: 2rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-third) {
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      padding: 1rem;
+      margin-top: 2rem;
+      color: $grey;
+      font-size: $font-size-large * 1.5;
+      border: 3px solid $grey;
+
+      @media only screen and (max-width: $breakpoint-third) {
+        width: 16rem;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-primary;
+      margin-top: 10rem;
+      font-size: $m-size * 1.1;
+      border-bottom: 1px solid $color-primary;
+      transition: all .5s;
+      padding: 1rem;
+
+      @media only screen and (max-width: $breakpoint-first) {
+        padding: 0;
+        font-size: $font-size-small;
+        margin-top: 7rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-second) {
+        padding: 0;
+        font-size: $font-size-small;
+      }
+
+      &:hover {
+        background-color: $color-primary-light;
+        color: $off-white;
+        transform: translateY(-.1rem) scale(1.03);
+        box-shadow: 0 .5rem 1rem rgba($black, .8);
+      }
+    }
+  }
+}

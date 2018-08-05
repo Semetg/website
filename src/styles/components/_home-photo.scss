@@ -1,0 +1,42 @@
+.home-photo {
+  position: relative;
+
+  &__background {
+    box-sizing: content-box;
+    border: 1px solid black;
+    width: 99.9%;
+    height: 80vh;
+    background-image: url('/images/Code1.png');
+    background-size: cover;
+
+    filter: blur(.4rem);
+  }
+  
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $off-white;
+    text-decoration: none;
+    font-size: 3 * $font-size-large;
+    padding: 2rem;
+    border: 3px solid $off-white;
+    animation: fade-in 4s 1;
+    transition: all .2s linear;
+
+    & span {
+      @media only screen and (max-width: $breakpoint-third) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      top: 49%;
+    }
+
+    &:active {
+      top: 49.5%;
+    }
+  }
+}

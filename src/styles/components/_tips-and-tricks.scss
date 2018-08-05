@@ -1,0 +1,61 @@
+.tips-and-tricks {
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: $code-background-color;
+    background-size: cover;
+    padding: 2rem 4rem;
+
+    @media only screen and (max-width: $breakpoint-third) {
+      padding: 1rem  .2rem;
+    }
+  }
+
+  &__animation {
+    color: $off-white;
+
+    & > * {
+      background: transparent !important;
+    }
+
+    &__code {
+      font-size: $font-size-large;
+      line-height: $font-size-large * 1.4;
+
+      @media only screen and (max-width: $breakpoint-third) {
+        font-size: $font-size-small;
+        line-height: $font-size-small * 1.4;
+
+      }
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    color: $off-white;
+    transition: all .2s;
+    border: 1rem ridge $black;
+    background-color: $color-primary-light;
+    font-size: $font-size-large * 2;
+    padding: 2rem;
+
+    & span {
+      @media only screen and (max-width: $breakpoint-second) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-second) {
+      font-size: $font-size-large * 1.5;
+    }
+
+    @media only screen and (max-width: $breakpoint-third) {
+      font-size: $font-size-small;
+      line-height: $font-size-small * 1.4;
+      padding: 1rem;
+    }
+  }
+}
